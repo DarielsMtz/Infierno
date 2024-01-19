@@ -1,0 +1,351 @@
+/* Menu Responsive */
+@media (max-width: 480px) and (orientation: portrait) {
+    .wrapp {
+        width: 480px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*Header*/
+    header {
+        width: 480px;
+        height: 100px;
+        z-index: 10;
+        position: fixed;
+        margin: 0px;
+        position: fixed;
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(1.5px);
+        -webkit-backdrop-filter: blur(1.2px);
+    }
+
+    header .logo img {
+        width: 13%;
+        margin: 20px;
+    }
+
+    .mostrar_menu,
+    .esconder_menu {
+        display: block;
+        margin-right: 40px;
+        font-size: 45px;
+        color: red;
+    }
+
+    header .menu {
+        position: fixed;
+        width: 101%;
+        height: 900%;
+        background: #222;
+        right: -101%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 20;
+        transition: 0.6s;
+    }
+
+    header .menu a {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        font-size: 24px;
+    }
+
+    .esconder_menu {
+        position: absolute;
+        top: 30px;
+        right: 0px;
+        color: #fff;
+        font-size: 45px;
+    }
+
+    #check:checked ~ .menu {
+        right: 0%;
+    }
+
+    header .socials {
+        display: contents;
+    }
+
+    .banner-inicio {
+        width: 480px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .banner-inicio video {
+        width: 480px;
+        margin: 0px;
+    }
+
+    .banner-inicio h1 {
+        width: 480px;
+        font-size: 25px;
+        color: #fff;
+        text-align: center;
+        position: absolute;
+        flex: 1;
+        top: 15%;
+        animation: scale-up-center 1.4s;
+    }
+
+    @keyframes scale-up-center {
+        0% {
+            transform: scale(.5)
+        }
+
+        100% {
+            transform: scale(1)
+        }
+    }
+
+    .titulo-lista {
+        width: 480px;
+        background-color: #000;
+        color: #FFF;
+        display: flex;
+        justify-content: center;
+        line-height: 100px;
+    }
+
+    .titulo-lista h2 {
+        font-family: "Alpine";
+        font-size: 40px;
+        height: 100px;
+    }
+
+
+    .lista-eventos {
+        width: 480px;
+        height: auto;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+    }
+
+    .lista-eventos .columnas {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        height: 100px;
+        word-spacing: 5px;
+        text-align: center;
+        line-height: 60px;
+        box-shadow: inset 0 0 0 0 #fff;
+        transition: color .25s ease-in-out, box-shadow .4s ease-in-out;
+
+        &:hover {
+            color: white;
+            box-shadow: inset 480px 0 0 0 #000000;
+            border-bottom-right-radius: 35px;
+            border-top-right-radius: 35px;
+            font-size: 19px;
+        }
+
+    }
+
+    .lista-eventos hr {
+        color: #333;
+    }
+
+    .lista-eventos .columnas li {
+        width: 100px;
+        list-style: none;
+        border-top: 1px solid #333;
+        border-bottom: 10px solid #333;
+    }
+
+    .titulo {
+        width: 480px;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        line-height: 100px;
+    }
+
+    .titulo h2 {
+        font-family: "Alpine";
+        font-size: 45px;
+        height: 100px;
+    }
+
+    .galeria-eventos {
+        width: 480px;
+        height: auto;
+        background-color: #000;
+        padding: 50px 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .galeria-eventos .carta-invidual {
+        width: 300px;
+        height: auto;
+        outline: 2px solid rgb(126 255 178 /25%);
+        flex: 1;
+        outline-offset: -10px;
+        overflow: hidden;
+        isolation: isolate;
+        border-radius: 20px;
+        margin: 10px;
+    }
+
+    .galeria-eventos .carta-invidual img:hover {
+        transform: none;
+    }
+
+    .galeria-eventos .carta-invidual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .25s;
+        z-index: -1;
+    }
+
+
+    /* Eventos */
+    .evento-titulo {
+        text-align: center;
+        color: #fff;
+        font-size: 32px;
+        margin-top: 100px;
+        font-family: "Alpine";
+    }
+
+    .banner-evento {
+        display: none;
+    }
+
+    .cartas-eventos {
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+    }
+
+    .card {
+        margin: 30px;
+        text-align: center;
+    }
+
+    .card img {
+        max-width: 400px;
+        max-height: 400px;
+        margin: auto;
+        object-fit: contain;
+    }
+
+    .card h2 {
+        margin: 15px;
+    }
+
+    /* 
+Galeria 
+*/
+    .banner-galeria {
+        display: none;
+    }
+
+    .galeria-titulo {
+        text-align: center;
+        color: #fff;
+        font-size: 32px;
+        margin-top: 120px;
+        font-family: "Alpine";
+    }
+
+    .galeria img:hover {
+        transform: scale(1.01);
+    }
+
+    /* 
+Artistas
+*/
+    .artista-titulo {
+        text-align: center;
+        color: #fff;
+        font-size: 32px;
+        margin-top: 100px;
+        font-family: "Alpine";
+    }
+
+    .card-container {
+        width: 480px;
+        padding: 0px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 375px;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 375px;
+        height: auto;
+    }
+
+    /* 
+Contacto
+*/
+    .contacto-titulo {
+        text-align: center;
+        color: #fff;
+        font-size: 32px;
+        margin-top: 100px;
+        font-family: "Alpine";
+    }
+
+    .contact-us {
+        width: 80%;
+        margin-left: 25px;
+        padding-top: 10px;
+    }
+
+    input,
+    textarea {
+        width: 90%;
+    }
+
+    /* 
+Footer 
+*/
+    footer {
+        width: 100%;
+        max-width: 480px;
+        q
+    }
+
+    .footer-content p {
+        margin: 20px;
+        text-align: center;
+        line-height: 20px;
+    }
+
+    .footer-bottom p {
+        float: none;
+    }
+
+    .footer-menu ul {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+
+/* 
+Fin Responsive 
+*/

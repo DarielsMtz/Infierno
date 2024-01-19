@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Comatible" content="ie=edge">
+    <title> Infierno - Contacto </title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/movile.css" type="text/css" />
+    <link rel="shortcut icon" href="imagenes/Logo_infierno2.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Contenedor Principal -->
+    <div class="wrapp">
+        <header id="nav">
+            <h2 class="logo"><a href="index.html"> <img src="imagenes/Logo_infierno2.png"> </a></h2>
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar_menu">
+                &#8801
+            </label>
+            <!-- Menu -->
+            <nav class="menu">
+                <a href="index.html"> Inicio </a>
+                <a href="Eventos.html"> Eventos </a>
+                <a href="Artistas.html"> Artistas </a>
+                <a href="Galeria.html"> Galeria </a>
+                <a href="Contacto.html"> Contacto </a>
+                <label for="check" class="esconder_menu">
+                    &#215
+                </label>
+                <!-- Redes Sociales -->
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Titulo de Contacto -->
+        <div class="contacto-titulo">
+            <h2> Contacto </h2>
+        </div>
+
+        <!-- Fomulario de Contacto -->
+        <section class="contact-us" id="contact-section">
+            <form id="contact" action="" method="post">
+                <div class="section-heading">
+                    <h4> Déjanos Un Mensaje </h4>
+                </div>
+                <div class="inputField">
+                    <input type="text" name="name" id="name" placeholder="Nombre" autocomplete="on" required>
+                    <span class="valid_info_name"></span>
+                </div>
+                <div class="inputField">
+                    <input type="email" name="email" id="email" placeholder="Email*" required>
+                    <span class="valid_info_email"></span>
+                </div>
+                <div class="inputField">
+                    <textarea name="message" id="message" placeholder="Mensaje"></textarea>
+                    <span class="valid_info_message"></span>
+                </div>
+                <div class="inputField btn">
+                    <button type="submit" id="form-submit" class="main-gradient-button" active>Enviar Mensaje</button>
+                </div>
+            </form>
+        </section>
+
+        <script src="js/validacion.js"></script>
+
+        <!-- ubicacion y Contacto -->
+        <div class="encontrarnos">
+            <li class="contacto">
+                <h3> ¡Nos Puedes Contactar!</h3>
+                <p><a href="https://goo.gl/maps/ynRB71RJPBGjogiK8" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"> </i> 07160 Palma, Mallorca - España</a></p>
+                <p><i class="fa fa-phone" aria-hidden="true"> </i> Tel.: +34 999 999 999</p>
+                <p><i class="fa fa-envelope-o" aria-hidden="true"> </i> e-mail: infierno666@hell.com</p>
+            </li>
+            <li class="mapa">
+                <img src="imagenes/mallorca.png" alt="mapa de la isla de mallorca">
+            </li>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <h3> Infierno </h3>
+
+                <p> Si estás buscando un lugar vibrante donde la música, el baile y la diversión se unan para crear una experiencia nocturna épica, no busques más allá de "Infierno".¡Te esperamos con los brazos abiertos para que descubras la noche más candente de la ciudad!</p>
+
+                <!-- Redes Sociales -->
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright &copy <span id="year">2023 |</span><a href="#"> DarielsMtz </a></p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

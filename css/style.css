@@ -1,0 +1,877 @@
+/* Reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+}
+
+@font-face {
+    font-family: "Alpine";
+    src: url("font/Alpine Regural");
+}
+
+/*
+Animacion de entrada
+*/
+@keyframes scale-up-center {
+    0% {
+        transform: scale(.5)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+/* 
+Cookies
+*/
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.modal h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.modal p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.modal-buttons {
+    text-align: center;
+}
+
+.modal-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de aceptar cookies */
+.cookie-accept-button {
+    background-color: #008000;
+    color: #ffffff;
+}
+
+/* Estilos para el botón de más información */
+.more-info-button {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* 
+========================================== 
+Header
+========================================== 
+*/
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(1.4px);
+    -webkit-backdrop-filter: blur(1.4px);
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+header .logo img {
+    width: 6%;
+    margin: 30px;
+}
+
+header nav {
+    width: 800px;
+}
+
+header .socials {
+    display: none;
+}
+
+
+header .menu a {
+    color: red;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.4s;
+    margin-left: 20px;
+    font-family: "Alpine";
+    font-size: 20px;
+}
+
+header .menu a:hover {
+    transition: .4s;
+    color: #fff;
+    text-decoration: underline 2.5px red;
+}
+
+header .socials {
+    display: none;
+}
+
+.mostrar_menu,
+.esconder_menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar_menu {
+    order: 1;
+    display: none;
+}
+
+.menu a:hover,
+.mostrar_menu:hover,
+.escoder_menu:hover {
+    color: #fff;
+}
+
+#check {
+    display: none;
+}
+
+.banner-inicio {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.banner-inicio video {
+    width: 100%;
+    height: 100%;
+}
+
+
+.banner-inicio h1 {
+    width: 880px;
+    font-size: 35px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    flex: 1;
+    top: 40%;
+    animation: scale-up-center 1.4s;
+}
+
+
+.titulo-lista {
+    width: 100%;
+    background-color: #FFF;
+    color: #000;
+    word-spacing: 10px;
+    display: flex;
+    justify-content: center;
+    line-height: 100px;
+
+}
+
+.titulo-lista h2 {
+    font-family: "Alpine";
+    font-size: 42px;
+    height: 100px;
+    animation: scale-up-center 1.4s;
+}
+
+.lista-eventos {
+    width: 100%;
+    background: #FFF;
+    padding-bottom: 20px;
+}
+
+.lista-eventos .columnas {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    word-spacing: 5px;
+    text-align: center;
+    line-height: 80px;
+    box-shadow: inset 0 0 0 0 #fff;
+    transition: color .30s ease-in-out, box-shadow .7s ease-in-out;
+
+    &:hover {
+        color: white;
+        box-shadow: inset 1500px 0 0 0 #252525;
+        border-bottom-right-radius: 35px;
+        border-top-right-radius: 35px;
+        font-size: 19px;
+        cursor: pointer;
+        word-spacing: 8px;
+    }
+}
+
+.lista-eventos .columnas a {
+    text-decoration: none;
+    color: #000;
+}
+
+.lista-eventos .columnas a:hover {
+    color: #FFF;
+}
+
+.lista-eventos hr {
+    color: #333;
+}
+
+.lista-eventos .columnas li {
+    width: 100px;
+    list-style: none;
+    border-top: 1px solid #333;
+    border-bottom: 10px solid #333;
+
+}
+
+.titulo {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    line-height: 100px
+}
+
+.titulo h2 {
+    font-family: "Alpine";
+    font-size: 45px;
+    height: 100px;
+    animation: scale-up-center 1.4s;
+}
+
+.galeria-eventos {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: #000;
+}
+
+.galeria-eventos .carta-invidual {
+    width: 80%;
+    height: 80%;
+    outline: 3px solid rgb(255 0 0 /25%);
+    flex: 1;
+    outline-offset: -10px;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.galeria-eventos .carta-invidual img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform .25s;
+}
+
+.galeria-eventos .carta-invidual img:hover {
+    transform: scale(1.04);
+}
+
+.resumen {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex: 1;
+    margin: 50px 0px;
+    justify-content: center;
+    background-image: url(../imagenes/nosotros.jpg);
+    background-size: cover;
+    opacity: .8;
+}
+
+.resumen li {
+    z-index: 1;
+    width: 60%;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    list-style: none;
+    margin: 10% 0;
+}
+
+
+/* 
+========================================== 
+Footer
+========================================== 
+*/
+
+
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    width: 100%;
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 4.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+    font-family: "Alpine";
+    color: #D80303;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+}
+
+.socials a i {
+    font-size: 1.5rem;
+    width: 20px;
+    transition: color 0.4s ease;
+}
+
+.socials a:hover i {
+    color: #D80303;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100%;
+    padding: 20px 0px;
+    padding-bottom: 40px;
+    text-align: center;
+
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+}
+
+.footer-bottom p a {
+    color: #ccc;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+}
+
+/* 
+================
+ PAGINA EVENTOS 
+================
+*/
+
+.banner-evento {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
+}
+
+.banner-evento img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.evento-titulo {
+    width: 100%;
+    background-color: #000;
+    color: #FFF;
+    font-size: 35px;
+    margin: 20px 0;
+    font-family: "Alpine";
+    display: flex;
+    justify-content: center;
+    line-height: 100px;
+}
+
+.titulo-lista h2 {
+    font-family: "Alpine";
+    font-size: 40px;
+    height: 100px;
+}
+
+/* Estilos de la carta */
+.cartas-eventos {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.cartas-eventos .card {
+    background-color: #111;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+    height: auto;
+    box-shadow: rgba(184, 175, 175, 0.45) 0px 20px 20px -25px;
+}
+
+.cartas-eventos .card img {
+    width: 100%;
+    max-width: 300px;
+    max-height: 350px;
+    height: auto;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cartas-eventos .card h2 {
+    font-size: 24px;
+    margin: 10px;
+    color: #fff;
+    font-family: 'Alpine';
+}
+
+.cartas-eventos .card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #DFDFDF;
+}
+
+.cartas-eventos .card li {
+    text-align: center;
+    color: #DFDFDF;
+    list-style-type: none;
+    font-size: 20px;
+
+}
+
+
+/* 
+===============
+PAGUINA GALERIA
+===============
+*/
+
+.banner-galeria {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex: 1;
+    margin: auto;
+    justify-content: center;
+
+}
+
+.banner-galeria img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.galeria-titulo {
+    width: 100%;
+    text-align: center;
+    font-family: "Alpine";
+    font-size: 40px;
+    letter-spacing: 10px;
+    background: #000;
+    color: #fff;
+    top: 150px;
+    z-index: 1;
+}
+
+.galeria {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background: #000;
+}
+
+.galeria img {
+    max-width: 350px;
+    padding: 1rem;
+    object-fit: contain;
+    margin: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+    transition-duration: .3s;
+    border: none;
+}
+
+/* 
+========================================== 
+PAGINA ARTISTAS
+========================================== 
+*/
+/* Estilos de la sección de cartas */
+.card-container {
+    width: 100%;
+    padding-top: 110px;
+    padding-bottom: 20px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container .card {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card-container .card:hover {
+    transform: scale(1.01);
+}
+
+.card-container .card img {
+    width: 100%;
+    max-width: 200px;
+    height: 300px;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-container .card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    font-family: 'Alpine';
+    letter-spacing: 5px;
+}
+
+.card-container .card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la información detallada al pasar el cursor */
+.card:hover .card-details {
+    display: block;
+}
+
+.card-container .card-details {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 94%;
+    height: 96%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.card-details h3 {
+    font-size: 20px;
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+.card-details p {
+    font-size: 18px;
+    margin: 20px;
+    text-align: center;
+}
+
+
+/* 
+========================================== 
+PAGINA CONTACTO
+========================================== 
+*/
+.banner-contacto {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.banner-contacto img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 
+Formulario
+*/
+
+section.contact-us #contact {
+    position: relative;
+    display: block;
+    width: 90%;
+    height: auto;
+    background-color: #000;
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+section.contact-us .section-heading {
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+.section-heading h4 {
+    line-height: 40px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #FFF;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+input,
+textarea {
+    width: 95%;
+    position: relative;
+    display: block;
+    background-color: #2b2b2b;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+    outline-color: #9e9e9e;
+}
+
+input {
+    height: 40px;
+    padding: 0px 15px;
+}
+
+textarea {
+    min-height: 140px;
+    max-height: 180px;
+    padding: 15px;
+    resize: none;
+}
+
+.contact-us span {
+    height: 20px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.valid_info_name,
+.valid_info_email,
+.valid_info_message {
+    display: inline-block;
+    font-size: 13px;
+    margin: 5px 2px;
+}
+
+.valid {
+    border: 2px solid green;
+    outline-color: green;
+}
+
+.invalid {
+    border: 2px solid red;
+    outline-color: red;
+}
+
+.btn {
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+#form-submit {
+    position: relative;
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(-145deg, rgba(10, 10, 10, 10) 0%, rgba(10, 10, 10, 10) 100%);
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s;
+    transition: all .3s;
+}
+
+#form-submit:disabled {
+    border: 1px solid #9e9e9e;
+    background: transparent;
+    color: #9e9e9e;
+    transition: none;
+    transform: none;
+    cursor: default;
+}
+
+#form-submit:hover:active {
+    border: 1px solid #9e9e9e;
+    color: #9e9e9e;
+    background: transparent;
+    transition: none;
+    transform: none;
+    cursor: default;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+
+/* 
+Ubicacion y Contacto
+*/
+.encontrarnos {
+    width: 100%;
+    height: 280px;
+    margin: 120px 0 0 0;
+    background: #222;
+    list-style: none;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encontrarnos h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+.encontrarnos .contacto {
+    color: #fff;
+    width: 100%;
+    max-width: 370px;
+    margin: 100px 0;
+    flex: 1;
+    line-height: 25px;
+    text-align: left;
+}
+
+.encontrarnos a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.encontrarnos a:hover {
+    color: #D80303;
+}
+
+.encontrarnos li img {
+    width: 100%;
+    max-width: 400px;
+    float: right;
+    flex: 1;
+}

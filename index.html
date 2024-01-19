@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Comatible" content="ie=edge">
+    <meta name="author" content="DarielsMtz" />
+    <meta name="description" content="Pagina Web de Djs" />
+    <meta name="keywords" content="manual,html,elementos,atributos,ejemplos" />
+    <title> Infierno - Inicio </title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/movile.css" type="text/css">
+    <link rel="shortcut icon" href="imagenes/Logo_infierno2.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Contenedor Principal -->
+    <div class="wrapp">
+        <header id="nav">
+            <h2 class="logo"><a href="index.html"> <img src="imagenes/Logo_infierno2.png"> </a></h2>
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar_menu">
+                &#8801
+            </label>
+            <!-- Menu -->
+            <nav class="menu">
+                <a href="index.html"> Inicio </a>
+                <a href="Eventos.html"> Eventos </a>
+                <a href="Artistas.html"> Artistas </a>
+                <a href="Galeria.html"> Galeria </a>
+                <a href="Contacto.html"> Contacto </a>
+                <label for="check" class="esconder_menu">
+                    &#215
+                </label>
+                <!-- Redes Sociales -->
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Imagen de Cabecera Principal -->
+        <div class="banner-inicio">
+            <video playsinline autoplay muted loop>
+                <source src="imagenes/video-presentacion.mp4" type="video/mp4">
+            </video>
+            <h1>"La fiesta nunca termina en nuestra discoteca,<br> Únete a la diversion sin fin."</h1>
+        </div>
+
+        <!-- Listado de Eventos -->
+        <div class="titulo-lista">
+            <h2> Proximas Presentaciones </h2>
+        </div>
+        <div class="lista-eventos">
+            <hr>
+            <div class="columnas"><a href="Eventos.html"> 01 Evento | Mallorca Live Fashion | 03/2025</a> </div>
+            <hr>
+            <div class="columnas"><a href="Eventos.html"> 02 Evento | Mallorca Live Fashion | 03/2025 </a></div>
+            <hr>
+            <div class="columnas"><a href="Eventos.html"> 03 Evento | Mallorca Live Fashion | 03/2025 </a></div>
+            <hr>
+            <div class="columnas"><a href="Eventos.html"> 04 Evento | Mallorca Live Fashion | 03/2025 </a></div>
+            <hr>
+            <div class="columnas"><a href="Eventos.html"> 05 Evento | Mallorca Live Fashion | 03/2025 </a></div>
+            <hr>
+        </div>
+
+        <!-- Cartas de Artistas -->
+        <div class="titulo">
+            <h2> Eventos </h2>
+        </div>
+
+        <div class="galeria-eventos">
+            <div class="carta-invidual">
+                <img src="imagenes/envento1.jpg" alt="evento #1">
+            </div>
+            <div class="carta-invidual">
+                <img src="imagenes/evento2.jpg" alt="evento #2">
+            </div>
+            <div class="carta-invidual">
+                <img src="imagenes/evento3.jpg" alt="evento #3">
+            </div>
+        </div>
+
+        <!-- Cookies -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <h2>Aviso de Cookies</h2>
+                <p>Utilizamos cookies para asegurarnos de brindarte la mejor experiencia en nuestro sitio web.</p>
+                <p>Al hacer clic en "Aceptar", aceptas el uso de todas las cookies. Puedes obtener más información en nuestra <a href="politica-cookies.html">Política de Cookies</a>.</p>
+                <div class="modal-buttons">
+                    <button id="cookieAcceptButton" class="cookie-accept-button">Aceptar</button>
+                    <button id="moreInfoButton" class="more-info-button">Más Información</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Obtener la referencia a los botones del modal
+            var cookieAcceptButton = document.getElementById("cookieAcceptButton");
+            var moreInfoButton = document.getElementById("moreInfoButton");
+
+            // Función para mostrar el modal
+            function showModal() {
+                var modal = document.getElementById("myModal");
+                modal.style.display = "block";
+            }
+
+            // Función para ocultar el modal
+            function hideModal() {
+                var modal = document.getElementById("myModal");
+                modal.style.display = "none";
+            }
+
+            // Evento al hacer clic en el botón de aceptar cookies
+            cookieAcceptButton.addEventListener("click", function() {
+                // Aquí puedes realizar las acciones necesarias al aceptar las cookies, como almacenar una preferencia en la base de datos o iniciar el seguimiento de análisis.
+                hideModal();
+            });
+
+            // Evento al hacer clic en el botón de más información
+            moreInfoButton.addEventListener("click", function() {
+                // Aquí puedes redirigir a la página de "Política de Cookies" para proporcionar más detalles sobre las cookies utilizadas y cómo gestionarlas.
+                window.location.href = "politica-cookies.html";
+            });
+
+            // Mostrar el modal al cargar la página
+            window.onload = function() {
+                showModal();
+            };
+
+        </script>
+
+        <!-- Pie de Pagina -->
+        <footer>
+            <div class="footer-content">
+                <h3> Infierno </h3>
+
+                <p> Si estás buscando un lugar vibrante donde la música, el baile y la diversión se unan para crear una experiencia nocturna épica, no busques más allá de "Infierno".¡Te esperamos con los brazos abiertos para que descubras la noche más candente de la ciudad!</p>
+
+                <!-- Redes Sociales -->
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright &copy <span id="year">2023 |</span><a href="#"> DarielsMtz </a></p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+ul>li*6>a
+
+</html>
